@@ -1,0 +1,16 @@
+{
+	"ImportPath": "github.com/ivch/go15",
+	"GoVersion": "go1.10",
+	"GodepVersion": "v79",
+	"Deps": [
+		{
+			"ImportPath": "github.com/mattn/go-runewidth",
+			"Comment": "v0.0.3-18-gc88d7e5",
+			"Rev": "c88d7e5f2e24de48a200a2655ac8a0910be9a0f7"
+		},
+		{
+			"ImportPath": "github.com/nsf/termbox-go",
+			"Rev": "60ab7e3d12ed91bc1b2486559c4b3a6b62297577"
+		}
+	]
+}
