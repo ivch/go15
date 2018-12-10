@@ -18,9 +18,7 @@ func Listen(ch <-chan string) {
 
 		clearCmd := exec.Command("clear")
 		clearCmd.Stdout = os.Stdout
-		if err := clearCmd.Run(); err != nil {
-			panic(err)
-		}
+		clearCmd.Run()
 
 		fmt.Printf("%s%s%s", screenTitle, msg, gameLegend)
 	}
