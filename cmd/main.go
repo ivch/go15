@@ -29,7 +29,7 @@ func main() {
 
 	game := go15.Init(byte(size))
 
-	ch := make(chan os.Signal)
+	ch := make(chan os.Signal, 1)
 	defer close(ch)
 
 	signal.Notify(ch, os.Interrupt, syscall.SIGTERM)

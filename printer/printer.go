@@ -11,13 +11,16 @@ const (
 	gameLegend  = "\n\nUse arrow keys to move tiles\nPress 's' to shuffle field\nPress 'q', Esc or Ctrl+C to exit"
 )
 
+//Listen listens to messages from input channel and prints them into stdout
 func Listen(ch <-chan string) {
 	for {
 		msg := <-ch
 
 		clearCmd := exec.Command("clear")
 		clearCmd.Stdout = os.Stdout
-		clearCmd.Run()
+		if err := clearCmd.Run(); err != nil {
+			panic(err)
+		}
 
 		fmt.Printf("%s%s%s", screenTitle, msg, gameLegend)
 	}

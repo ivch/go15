@@ -40,7 +40,7 @@ func (g *game) Run() {
 			}
 
 			if action == input.KeyShuffle {
-				gameGrid = grid.Restart(gameGrid)
+				gameGrid = grid.Reload(gameGrid)
 				continue
 			}
 

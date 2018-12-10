@@ -7,6 +7,7 @@ import (
 	"github.com/nsf/termbox-go"
 )
 
+//list of constants to export pressed key values
 const (
 	KeyUp byte = iota + 1
 	KeyRight
@@ -16,6 +17,7 @@ const (
 	KeyQuit
 )
 
+//Listen listens any keyboard input and sends to communication channel
 func Listen(input chan byte, exit chan struct{}) {
 	for {
 		e := termbox.PollEvent()
@@ -25,7 +27,6 @@ func Listen(input chan byte, exit chan struct{}) {
 			input <- getAction(e)
 		case termbox.EventInterrupt:
 			exit <- struct{}{}
-			break
 		case termbox.EventError:
 			log.Fatal(e.Err)
 		}

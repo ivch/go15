@@ -8,8 +8,10 @@ import (
 
 const shuffleTimeLimit = 100
 
+//Grid represents grid type. made as [][]byte to represent matrix
 type Grid [][]byte
 
+//Init generates gameGrid and resultGrid of given size
 func Init(size byte) (Grid, Grid) {
 	grid := make(Grid, size)
 
@@ -32,13 +34,14 @@ func Init(size byte) (Grid, Grid) {
 	return grid, shuffled
 }
 
-func Restart(g Grid) Grid {
+//Reload shuffles givend grid to restart the game
+func Reload(g Grid) Grid {
 	return shuffle(g)
 }
 
+//String returns grid in string representation in order to satisfy fmt.Stringer interface
 func (g Grid) String() string {
 	var s string
-
 	for _, row := range g {
 		var r string
 		for _, val := range row {
@@ -99,6 +102,7 @@ func switchTiles(g Grid) Grid {
 	return grid
 }
 
+//Copy performs deep copy of given grid
 func Copy(g Grid) Grid {
 	ng := make(Grid, len(g))
 	for y := range g {
@@ -108,6 +112,7 @@ func Copy(g Grid) Grid {
 	return ng
 }
 
+//GetZeroTilePosition returns x,y coordinates of empty tile on game field
 func GetZeroTilePosition(g Grid) (byte, byte, error) {
 	for y, row := range g {
 		for x, val := range row {
