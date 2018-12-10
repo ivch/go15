@@ -9,6 +9,7 @@ import (
 	"github.com/ivch/go15/printer"
 )
 
+//Game describes game interface
 type Game interface {
 	Run()
 	Stop()
@@ -117,13 +118,13 @@ func moveIsPossible(x, y, direction byte, size byte) bool {
 func getNextCoords(x, y, direction byte) (byte, byte) {
 	switch direction {
 	case input.KeyUp:
-		y += 1
+		y++
 	case input.KeyDown:
-		y -= 1
+		y--
 	case input.KeyLeft:
-		x += 1
+		x++
 	case input.KeyRight:
-		x -= 1
+		x--
 	}
 
 	return x, y
