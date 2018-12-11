@@ -1,5 +1,5 @@
 # 15 puzzle
-Golang implementation of 15 puzzle with simple command line interface
+Golang implementation of 15 puzzle with simple command line interface<br/>
 Made as test task for the interview
 
 ## Godep
@@ -26,5 +26,5 @@ Made as test task for the interview
 - run `make`
 - `app` binary is placed in the `/cli` 
 
-Due to specific input capturing libray can't be run in docker :(
+Due to specific input capturing libray can't be run in docker :(<br/
 Can be extended to use http server. In that case can be run in docker
