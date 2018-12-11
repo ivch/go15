@@ -12,4 +12,5 @@ before_script:
 
 script:
   - ls -la
+  - pwd
   - go test -v -race ./..
