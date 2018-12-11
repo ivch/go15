@@ -22,7 +22,7 @@ Made as test task for the interview
 - `cd cli && go build -o app`
 - `./app`
 
-## Build Linux binary on any platform
+## Build Linux binary on any platform with docker
 - run `make`
 - `app` binary is placed in the `/cli` 
 
