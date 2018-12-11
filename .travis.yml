@@ -11,4 +11,4 @@ before_script:
   - godep restore
 
 script:
-  - go test -v -race ./..
+  - cd go15 && go test -v -race ./..
