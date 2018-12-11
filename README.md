@@ -12,7 +12,7 @@ Made as test task for the interview
 
 ## Run application
 - restore dependecies
-- `cd cmd && go build -o app`
+- `cd cli && go build -o app`
 - `./app`
 
 Due to specific input capturing libray can't be run in docker :(
