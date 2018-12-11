@@ -7,10 +7,9 @@ git:
   depth: 1
 
 before_script:
+  - go get -t -v ./...
   - go get github.com/tools/godep
   - godep restore
 
 script:
-  - ls -la
-  - pwd
   - go test -v -race ./..
