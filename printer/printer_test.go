@@ -10,7 +10,7 @@ import (
 	"time"
 )
 
-func Test_Listen(t *testing.T) {
+func TestListen(t *testing.T) {
 	old := os.Stdout
 	r, w, err := os.Pipe()
 	if err != nil {

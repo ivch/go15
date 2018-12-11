@@ -11,7 +11,7 @@ const shuffleTimeLimit = 100
 //Grid represents grid type. made as [][]byte to represent matrix
 type Grid [][]byte
 
-//Init generates gameGrid and resultGrid of given size
+//Init generates resultGrid and gameGrid of given size
 func Init(size byte) (Grid, Grid) {
 	grid := make(Grid, size)
 

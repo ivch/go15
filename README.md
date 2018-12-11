@@ -10,6 +10,13 @@ Made as test task for the interview
 ## Run tests
 - `go test ./...`
 
+## gocov Installation
+- `go get github.com/axw/gocov/gocov`
+- `go get -u gopkg.in/matm/v1/gocov-html`
+
+## Calculate coverage
+- `gocov test . | gocov-html > coverage.html`
+
 ## Run application
 - restore dependecies
 - `cd cli && go build -o app`

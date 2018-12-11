@@ -100,7 +100,7 @@ func (g *game) Stop() {
 	g.exit <- struct{}{}
 }
 
-func moveIsPossible(x, y, direction byte, size byte) bool {
+func moveIsPossible(x, y, direction, size byte) bool {
 	switch direction {
 	case input.KeyUp:
 		return y < size-1
