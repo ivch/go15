@@ -22,5 +22,9 @@ Made as test task for the interview
 - `cd cli && go build -o app`
 - `./app`
 
+## Build Linux binary on any platform
+- run `make`
+- `app` binary is placed in the `/cli` 
+
 Due to specific input capturing libray can't be run in docker :(
 Can be extended to use http server. In that case can be run in docker
